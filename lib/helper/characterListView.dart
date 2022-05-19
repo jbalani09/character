@@ -27,17 +27,17 @@ class CharacterListView extends StatelessWidget {
               itemBuilder: (context, index) => Stack(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 15.0,left: 12.0,right: 12.0,bottom: 15),
+                    padding: const EdgeInsets.all(12.0),
                     child: Container(height: gHeight*0.13,width: gWidth,
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.white.withOpacity(0.04),
+                              color: Colors.white.withOpacity(0.06),
                               offset: Offset(-6.0, -6.0),
                               blurRadius: 16.0,
                             ),
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.6),
+                              color: Colors.black.withOpacity(0.4),
                               offset: Offset(6.0, 6.0),
                               blurRadius: 16.0,
                             ),
