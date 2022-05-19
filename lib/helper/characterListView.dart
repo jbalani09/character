@@ -27,17 +27,17 @@ class CharacterListView extends StatelessWidget {
               itemBuilder: (context, index) => (_con.searchValue != '' && _con.charactersData.isEmpty)?const Center(child: Text('Sry No Result Found :('),):Stack(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(12.0),
+                    padding: const EdgeInsets.only(top: 15.0,left: 12.0,right: 12.0,bottom: 15),
                     child: Container(height: gHeight*0.13,width: gWidth,
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.white.withOpacity(0.06),
+                              color: Colors.white.withOpacity(0.04),
                               offset: Offset(-6.0, -6.0),
                               blurRadius: 16.0,
                             ),
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.4),
+                              color: Colors.black.withOpacity(0.6),
                               offset: Offset(6.0, 6.0),
                               blurRadius: 16.0,
                             ),
@@ -57,9 +57,9 @@ class CharacterListView extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  TextIcon(text: (_con.charactersData[index]['house'] == '')?'None':_con.charactersData[index]['house'],prefix: const Icon(Icons.house_outlined,color: kSecondaryColor,size: 20),textStyle: const TextStyle(color: kTextLightColor,fontSize: 15),edgeInsets: EdgeInsets.zero,),
+                                  TextIcon(text: (_con.charactersData[index]['house'] == '')?'None':_con.charactersData[index]['house'],prefix: const Icon(Icons.house_outlined,color: kTextLightColor,size: 20),textStyle: const TextStyle(color: kTextLightColor,fontSize: 15),edgeInsets: EdgeInsets.zero,),
                                   // const Text("House",style: TextStyle(color: kTextLightColor,fontSize: 15),),
-                                  TextIcon(text: (_con.charactersData[index]['ancestry'] == '')?"Blood Line":_con.charactersData[index]['ancestry'],prefix: const Icon(Icons.bloodtype,color: kSecondaryColor,size: 20,),textStyle: const TextStyle(color: kTextLightColor,fontSize: 15),edgeInsets: EdgeInsets.zero),
+                                  TextIcon(text: (_con.charactersData[index]['ancestry'] == '')?"Blood Line":_con.charactersData[index]['ancestry'],prefix: const Icon(Icons.bloodtype,color: kTextLightColor,size: 20,),textStyle: const TextStyle(color: kTextLightColor,fontSize: 15),edgeInsets: EdgeInsets.zero),
                                 ],
                               ),
                             ),
@@ -69,9 +69,9 @@ class CharacterListView extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  TextIcon(text: (_con.charactersData[index]['dateOfBirth'] == '')?"not available":_con.charactersData[index]['dateOfBirth'],prefix: const Icon(Icons.calendar_today,color: kSecondaryColor,size: 20),textStyle: const TextStyle(color: kTextLightColor,fontSize: 15),edgeInsets: EdgeInsets.zero,),
+                                  TextIcon(text: (_con.charactersData[index]['dateOfBirth'] == '')?"not available":_con.charactersData[index]['dateOfBirth'],prefix: const Icon(Icons.calendar_today,color: kTextLightColor,size: 20),textStyle: const TextStyle(color: kTextLightColor,fontSize: 15),edgeInsets: EdgeInsets.zero,),
                                   // const Text("House",style: TextStyle(color: kTextLightColor,fontSize: 15),),
-                                  TextIcon(text: (_con.charactersData[index]['gender'] == '')?"None":_con.charactersData[index]['gender'],prefix: const Icon(Icons.person,color: kSecondaryColor,size: 20,),textStyle: const TextStyle(color: kTextLightColor,fontSize: 15),edgeInsets: EdgeInsets.zero),
+                                  TextIcon(text: (_con.charactersData[index]['gender'] == '')?"None":_con.charactersData[index]['gender'],prefix: const Icon(Icons.person,color: kTextLightColor,size: 20,),textStyle: const TextStyle(color: kTextLightColor,fontSize: 15),edgeInsets: EdgeInsets.zero),
                                 ],
                               ),
                             ),
